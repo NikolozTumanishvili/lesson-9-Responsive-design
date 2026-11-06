@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1440px;
+  margin: 0 auto;
+  background: #f3ede2;
+  color: #3b2a2a;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* Header */
+.site-header {
+  height: 72px;
+  border-bottom: 1px solid #ddd3c3;
+  background: #f3ede2;
+}
+
+.header-inner {
+  width: 1200px;
+  height: 71px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 126px;
+  margin-top: -2px;
+}
+
+.logo-name {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #5e1a26;
+  letter-spacing: 0.5px;
+}
+
+.logo-sub {
+  display: block;
+  margin-top: 2px;
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #b08d57;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  display: block;
+  padding: 6px 0 5px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #3b2a2a;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a.active {
+  color: #5e1a26;
+  border-bottom-color: #b08d57;
+}
+
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.lang-link {
+  padding: 4px 0 3px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #8a7a6a;
+  border-bottom: 2px solid transparent;
+}
+
+.lang-link.active {
+  color: #5e1a26;
+  border-bottom-color: #b08d57;
+}
+
+.lang-ka {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.lang-dot {
+  color: #b9ab98;
+}
+
+.cart-btn {
+  margin-left: 20px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+  color: #3b2a2a;
+  cursor: pointer;
+}
+
+.login-btn {
+  margin-left: 24px;
+  width: 70px;
+  height: 38px;
+  border: 1px solid #5e1a26;
+  border-radius: 4px;
+  background: transparent;
+  color: #5e1a26;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding-top: 54px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  color: #b08d57;
+}
+
+.hero h1 {
+  margin-top: 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  color: #5e1a26;
+}
+
+.lead {
+  margin-top: 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 28px;
+  color: #7a6a5c;
+}
+
+.divider {
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 20px auto 0;
+  background: #b08d57;
+}
+
+/* Toolbar */
+.menu {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  margin-top: 38px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.chip {
+  height: 40px;
+  padding: 0 17px;
+  border: 1px solid #d3c7b4;
+  border-radius: 20px;
+  background: #fbf7ef;
+  color: #3b2a2a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: #5e1a26;
+  border-color: #5e1a26;
+  color: #fff;
+}
+
+.search {
+  width: 252px;
+  height: 52px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d3c7b4;
+  border-radius: 26px;
+  background: #fbf7ef;
+  color: #8a7a6a;
+}
+
+.search input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 15px;
+  color: #3b2a2a;
+}
+
+.search input::placeholder {
+  color: #8a7a6a;
+}
+
+/* Cards */
+.grid {
+  margin-top: 36px;
+  display: flex;
+  gap: 24px;
+}
+
+.card {
+  width: 384px;
+  height: 436px;
+  border: 1px solid #d9cfbf;
+  border-radius: 6px;
+  background: #fcf8f0;
+  box-shadow: 0 2px 6px rgba(80, 55, 30, 0.12);
+  overflow: hidden;
+}
+
+.card-img {
+  height: 286px;
+}
+
+.img-bread {
+  background:
+    radial-gradient(ellipse 150px 45px at 45% 52%, #e8c487 0%, #d9a860 60%, transparent 100%),
+    radial-gradient(ellipse 200px 40px at 40% 80%, rgba(120, 110, 110, 0.35), transparent 100%),
+    linear-gradient(180deg, #c5d3de 0%, #e3e8ee 45%, #f4f2ef 100%);
+}
+
+.img-stew {
+  background:
+    radial-gradient(ellipse 120px 60px at 50% 52%, #3a2420 0%, #4a2f26 70%, transparent 100%),
+    radial-gradient(ellipse 165px 120px at 50% 52%, #cbb99a 0%, #b9a27f 80%, transparent 100%),
+    linear-gradient(180deg, #7b5a3a 0%, #c9c2b6 40%, #d8d4cc 100%);
+}
+
+.img-wine {
+  background:
+    radial-gradient(ellipse 130px 110px at 50% 25%, #3a0f1f 0%, #4a1226 75%, transparent 100%),
+    linear-gradient(90deg, transparent 47%, rgba(190, 190, 195, 0.9) 49%, rgba(190, 190, 195, 0.9) 52%, transparent 54%),
+    linear-gradient(180deg, #dcdcdf 0%, #e9e8e8 100%);
+}
+
+.card-body {
+  padding: 16px 18px 0;
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.card-head h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #3b2a2a;
+  white-space: nowrap;
+}
+
+.leader {
+  flex: 1;
+  border-bottom: 1px dotted #b9ab98;
+}
+
+.price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #5e1a26;
+}
+
+.desc {
+  margin-top: 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7a6a5c;
+}
+
+.add-btn {
+  display: block;
+  margin: 14px 0 0 auto;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #5e1a26;
+  border-radius: 3px;
+  background: transparent;
+  color: #5e1a26;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

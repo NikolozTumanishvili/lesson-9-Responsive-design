@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The menu — Le Bistro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Karla:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">
+        <span class="logo-name">Le Bistro</span>
+        <span class="logo-sub">BY IT STEP</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <ul>
+          <li><a class="active" href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang" aria-label="Language">
+          <a class="lang-link active" href="#">EN</a>
+          <span class="lang-dot">·</span>
+          <a class="lang-link lang-ka" href="#">ქარ</a>
+        </div>
+        <button class="cart-btn" type="button" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 8h14l-1 12H6L5 8z"/>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+          </svg>
+        </button>
+        <button class="login-btn" type="button">Log in</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LA CARTE</p>
+      <h1>The menu</h1>
+      <p class="lead">Cooked from scratch every day. Prices are in lari, service is on the house.</p>
+      <span class="divider"></span>
+    </section>
+
+    <section class="menu" aria-label="Menu">
+      <div class="toolbar">
+        <ul class="filters">
+          <li><button class="chip active" type="button">Everything</button></li>
+          <li><button class="chip" type="button">Starters</button></li>
+          <li><button class="chip" type="button">Main Courses</button></li>
+          <li><button class="chip" type="button">Bakery &amp; Pastries</button></li>
+          <li><button class="chip" type="button">Desserts</button></li>
+          <li><button class="chip" type="button">Drinks</button></li>
+        </ul>
+
+        <form class="search" role="search" action="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.3-4.3"/>
+          </svg>
+          <input type="search" placeholder="Search dishes…" aria-label="Search dishes">
+        </form>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-img img-bread" role="img" aria-label="Baguette Tradition"></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h2>Baguette Tradition</h2>
+              <span class="leader"></span>
+              <span class="price">₾5</span>
+            </div>
+            <p class="desc">Crackling crust, open crumb — baked twice daily.</p>
+            <button class="add-btn" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img img-stew" role="img" aria-label="Boeuf Bourguignon"></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h2>Boeuf Bourguignon</h2>
+              <span class="leader"></span>
+              <span class="price">₾38</span>
+            </div>
+            <p class="desc">Beef stewed in Burgundy wine with lardons and carrots.</p>
+            <button class="add-btn" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img img-wine" role="img" aria-label="Bordeaux Rouge (glass)"></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h2>Bordeaux Rouge (glass)</h2>
+              <span class="leader"></span>
+              <span class="price">₾16</span>
+            </div>
+            <p class="desc">House red — round, dark fruit, soft tannins.</p>
+            <button class="add-btn" type="button">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

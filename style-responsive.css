@@ -1,0 +1,477 @@
+/* ==========================================================
+   Mobile-first responsive version.
+   Base styles = mobile. Then: min-width 768px (tablet)
+   and min-width 1024px (desktop).
+   1rem = 16px.
+   ========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* % unit: text size follows the user's browser setting */
+  font-size: 100%;
+}
+
+body {
+  background: #f3ede2;
+  color: #3b2a2a;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem; /* rem unit: 16px */
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* Responsive images: never wider than the parent, height keeps the ratio */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Shared centered container */
+.container {
+  /* min() + max() + vw: at most 75rem (1200px), with side gaps of at least 1rem that grow with the screen (5vw) */
+  width: min(75rem, 100% - max(2rem, 5vw));
+  margin-inline: auto;
+}
+
+/* ---------- Header (mobile) ---------- */
+.site-header {
+  min-height: 4rem; /* rem unit */
+  border-bottom: 1px solid #ddd3c3;
+  background: #f3ede2;
+}
+
+.header-inner {
+  min-height: 3.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  margin-top: -0.125rem;
+}
+
+.logo-name {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  /* clamp(): 22px on small screens, grows with 5vw, stops at 26px */
+  font-size: clamp(1.375rem, 4vw + 0.5rem, 1.625rem);
+  line-height: 1;
+  font-weight: 600;
+  color: #5e1a26;
+  letter-spacing: 0.03125rem;
+}
+
+.logo-sub {
+  display: block;
+  margin-top: 0.125rem;
+  font-size: 0.5625rem;
+  line-height: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #b08d57;
+}
+
+/* Nav links are hidden on mobile (hamburger shown instead) */
+.main-nav {
+  display: none;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.375rem 0 0.3125rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #3b2a2a;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a.active {
+  color: #5e1a26;
+  border-bottom-color: #b08d57;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+}
+
+.lang-link {
+  padding: 0.25rem 0 0.1875rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  color: #8a7a6a;
+  border-bottom: 2px solid transparent;
+}
+
+.lang-link.active {
+  color: #5e1a26;
+  border-bottom-color: #b08d57;
+}
+
+.lang-ka {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.lang-dot {
+  color: #b9ab98;
+}
+
+.cart-btn {
+  margin-left: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+  color: #3b2a2a;
+  cursor: pointer;
+}
+
+/* Login button is hidden on mobile */
+.login-btn {
+  display: none;
+  margin-left: 1.5rem;
+  width: 4.375rem;
+  height: 2.375rem;
+  border: 1px solid #5e1a26;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: #5e1a26;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hamburger icon (visual only) */
+.burger {
+  margin-left: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3125rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 1.375rem;
+  height: 2px;
+  border-radius: 1px;
+  background: #5e1a26;
+}
+
+/* ---------- Hero (mobile) ---------- */
+.hero {
+  /* clamp(): top spacing between 32px and 54px depending on viewport width (vw) */
+  padding: clamp(2rem, 6vw + 0.5rem, 3.375rem) 1rem 0;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  color: #b08d57;
+}
+
+.hero h1 {
+  margin-top: 0.75rem;
+  font-family: "Cormorant Garamond", serif;
+  /* clamp(): 32px on mobile up to 40px on desktop */
+  font-size: clamp(2rem, 1.5rem + 1.6vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 600;
+  color: #5e1a26;
+}
+
+.lead {
+  /* max-width in % + auto margins keeps long text readable and centered */
+  max-width: 100%;
+  margin: 0.875rem auto 0;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  /* clamp(): 18px to 20px */
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  line-height: 1.4;
+  color: #7a6a5c;
+}
+
+.divider {
+  display: block;
+  width: 3.5rem;
+  height: 2px;
+  margin: 1.25rem auto 0;
+  background: #b08d57;
+}
+
+/* ---------- Toolbar (mobile: stacked) ---------- */
+.toolbar {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* chips wrap to new lines, so no horizontal scroll */
+  gap: 0.5rem;
+}
+
+.chip {
+  height: 2.5rem;
+  padding: 0 1.0625rem;
+  border: 1px solid #d3c7b4;
+  border-radius: 1.25rem;
+  background: #fbf7ef;
+  color: #3b2a2a;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: #5e1a26;
+  border-color: #5e1a26;
+  color: #fff;
+}
+
+.search {
+  width: 100%; /* % unit: full width on mobile */
+  height: 3.25rem;
+  padding: 0 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  border: 1px solid #d3c7b4;
+  border-radius: 1.625rem;
+  background: #fbf7ef;
+  color: #8a7a6a;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 0.9375rem;
+  color: #3b2a2a;
+}
+
+.search input::placeholder {
+  color: #8a7a6a;
+}
+
+/* ---------- Cards (mobile: 1 column) ---------- */
+.grid {
+  margin-top: 2.25rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 100%; /* % unit: one full-width column */
+  gap: 1.5rem;
+}
+
+.card {
+  min-width: 0;
+  border: 1px solid #d9cfbf;
+  border-radius: 0.375rem;
+  background: #fcf8f0;
+  box-shadow: 0 2px 6px rgba(80, 55, 30, 0.12);
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%; /* % unit: image fills the card */
+  height: auto;
+}
+
+.card-body {
+  padding: 1rem 1.125rem 1.375rem;
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+}
+
+.card-head h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #3b2a2a;
+}
+
+.leader {
+  flex: 1;
+  min-width: 1rem;
+  border-bottom: 1px dotted #b9ab98;
+}
+
+.price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #5e1a26;
+}
+
+.desc {
+  margin-top: 0.375rem;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #7a6a5c;
+}
+
+.add-btn {
+  display: block;
+  margin: 0.875rem 0 0 auto;
+  height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 1px solid #5e1a26;
+  border-radius: 0.1875rem;
+  background: transparent;
+  color: #5e1a26;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   Tablet: 768px and up
+   ========================================================== */
+@media (min-width: 768px) {
+  .site-header,
+  .header-inner {
+    min-height: 4.5rem;
+  }
+
+  .header-inner {
+    min-height: 4.4375rem;
+  }
+
+  /* Show nav links, hide hamburger, show login */
+  .main-nav {
+    display: block;
+    margin-left: 1.5rem;
+    margin-right: auto;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .login-btn {
+    display: block;
+  }
+
+  .cart-btn {
+    margin-left: 1.25rem;
+  }
+
+  .lead {
+    max-width: 90%; /* % unit */
+  }
+
+  /* 2 columns: fr units share the width equally */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search {
+    width: 50%; /* % unit */
+    min-width: 15.75rem; /* rem unit */
+  }
+}
+
+/* ==========================================================
+   Desktop: 1024px and up
+   ========================================================== */
+@media (min-width: 1024px) {
+  .main-nav {
+    margin-left: 3.5rem;
+  }
+
+  .hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lead {
+    max-width: none;
+  }
+
+  /* Filters and search sit on one row */
+  .toolbar {
+    margin-top: 2.375rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .search {
+    flex: 0 0 15.75rem; /* 252px */
+    width: 15.75rem;
+  }
+
+  /* 3 columns */
+  .grid {
+    margin-top: 2.25rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-body {
+    padding-bottom: 1.5rem;
+  }
+}

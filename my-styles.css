@@ -1,0 +1,196 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 500px;
+    background-color: grey;
+    padding: 20px;
+}
+
+
+
+/* ფუნქციები ------------------------ */
+
+
+/* p{
+    background-color: chartreuse;
+} */
+
+/* p{
+    width: clamp(200px, 60%, 600px);
+
+    min-width: 200px;
+    width: 60%;
+    max-width: 600px;
+} */
+
+/* p{
+    width: min(90%, 700px);
+} */
+
+/* p{
+    width: max(40%, 200px);
+} */
+
+
+/* media ------------------------- */
+/* desktop-first */
+
+/* section{
+    display: flex;
+}
+
+article{
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: bisque;
+}
+
+.img-placeholder{
+    width: 100%;
+    height: 200px;
+    background-color: chartreuse;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 100%;
+} */
+
+/* @media screen and (min-width: 551px) and (max-width: 800px) {
+    section{
+        flex-wrap: wrap;
+    }
+
+    article{
+        width: max(50%, 200px);
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .desc, button{
+        font-size: 1.5rem;
+    }
+
+    button{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    section{
+        flex-direction: column;
+    }
+    article{
+        width: 100%;
+    }
+
+    h3{
+        font-size: 3rem;
+    }
+
+    .desc, button{
+        font-size: 2rem;
+    }
+
+    button{
+        width: 100%;
+    }
+} */
+
+
+
+/* -------------------------- */
+/* mobile-first */
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: bisque;
+}
+
+.img-placeholder{
+    width: 100%;
+    height: 200px;
+    background-color: chartreuse;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+.desc, button{
+    font-size: 2rem;
+}
+
+button{
+    width: 100%;
+}
+
+@media screen and (min-width: 551px) {
+    section{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    article{
+        width: max(50%, 200px);
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .desc, button{
+        font-size: 1.5rem;
+    }
+
+    button{
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    section{
+        display: flex;
+    }
+
+    article{
+        width: 300px;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: bisque;
+    }
+
+    .img-placeholder{
+        width: 100%;
+        height: 200px;
+        background-color: chartreuse;
+        margin-bottom: 10px;
+    }
+
+    img{
+        width: 100%;
+    }
+}

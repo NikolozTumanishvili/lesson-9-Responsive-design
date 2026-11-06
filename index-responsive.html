@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The menu — Le Bistro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Karla:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="#">
+        <span class="logo-name">Le Bistro</span>
+        <span class="logo-sub">BY IT STEP</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <ul>
+          <li><a class="active" href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang" aria-label="Language">
+          <a class="lang-link active" href="#">EN</a>
+          <span class="lang-dot">·</span>
+          <a class="lang-link lang-ka" href="#">ქარ</a>
+        </div>
+        <button class="cart-btn" type="button" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 8h14l-1 12H6L5 8z"/>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+          </svg>
+        </button>
+        <button class="login-btn" type="button">Log in</button>
+        <button class="burger" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LA CARTE</p>
+      <h1>The menu</h1>
+      <p class="lead">Cooked from scratch every day. Prices are in lari, service is on the house.</p>
+      <span class="divider"></span>
+    </section>
+
+    <section class="menu container" aria-label="Menu">
+      <div class="toolbar">
+        <ul class="filters">
+          <li><button class="chip active" type="button">Everything</button></li>
+          <li><button class="chip" type="button">Starters</button></li>
+          <li><button class="chip" type="button">Main Courses</button></li>
+          <li><button class="chip" type="button">Bakery &amp; Pastries</button></li>
+          <li><button class="chip" type="button">Desserts</button></li>
+          <li><button class="chip" type="button">Drinks</button></li>
+        </ul>
+
+        <form class="search" role="search" action="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.3-4.3"/>
+          </svg>
+          <input type="search" placeholder="Search dishes…" aria-label="Search dishes">
+        </form>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <img class="card-img" width="384" height="286" alt="Baguette Tradition"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='384' height='286' viewBox='0 0 384 286'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c5d3de'/%3E%3Cstop offset='0.5' stop-color='%23e3e8ee'/%3E%3Cstop offset='1' stop-color='%23f4f2ef'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='384' height='286' fill='url(%23g)'/%3E%3Cellipse cx='160' cy='250' rx='120' ry='14' fill='%23786e6e' opacity='0.35'/%3E%3Cellipse cx='170' cy='150' rx='115' ry='45' fill='%23d9a860' transform='rotate(25 170 150)'/%3E%3Cellipse cx='200' cy='175' rx='60' ry='30' fill='%23e8c487' transform='rotate(25 200 175)'/%3E%3C/svg%3E">
+          <div class="card-body">
+            <div class="card-head">
+              <h2>Baguette Tradition</h2>
+              <span class="leader"></span>
+              <span class="price">₾5</span>
+            </div>
+            <p class="desc">Crackling crust, open crumb — baked twice daily.</p>
+            <button class="add-btn" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" width="384" height="286" alt="Boeuf Bourguignon"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='384' height='286' viewBox='0 0 384 286'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237b5a3a'/%3E%3Cstop offset='0.4' stop-color='%23c9c2b6'/%3E%3Cstop offset='1' stop-color='%23d8d4cc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='384' height='286' fill='url(%23g)'/%3E%3Cellipse cx='192' cy='150' rx='170' ry='128' fill='%23b9a27f'/%3E%3Cellipse cx='192' cy='150' rx='130' ry='95' fill='%23cbb99a'/%3E%3Cellipse cx='192' cy='160' rx='85' ry='55' fill='%234a2f26'/%3E%3Crect x='175' y='110' width='45' height='30' rx='6' fill='%23ece9cc'/%3E%3C/svg%3E">
+          <div class="card-body">
+            <div class="card-head">
+              <h2>Boeuf Bourguignon</h2>
+              <span class="leader"></span>
+              <span class="price">₾38</span>
+            </div>
+            <p class="desc">Beef stewed in Burgundy wine with lardons and carrots.</p>
+            <button class="add-btn" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" width="384" height="286" alt="Bordeaux Rouge (glass)"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='384' height='286' viewBox='0 0 384 286'%3E%3Crect width='384' height='286' fill='%23e6e5e6'/%3E%3Cellipse cx='192' cy='60' rx='150' ry='150' fill='%23d8d8db'/%3E%3Cellipse cx='192' cy='55' rx='140' ry='135' fill='%234a1226'/%3E%3Crect x='184' y='190' width='16' height='96' fill='%23c4c4c9'/%3E%3C/svg%3E">
+          <div class="card-body">
+            <div class="card-head">
+              <h2>Bordeaux Rouge (glass)</h2>
+              <span class="leader"></span>
+              <span class="price">₾16</span>
+            </div>
+            <p class="desc">House red — round, dark fruit, soft tannins.</p>
+            <button class="add-btn" type="button">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
